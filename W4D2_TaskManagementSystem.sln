@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{5E29EAEA-2A63-48B8-AD0E-537983574D08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskService", "Backend\TaskService\TaskService.csproj", "{144BC108-008E-456D-8F7B-3A1198D0CD65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{144BC108-008E-456D-8F7B-3A1198D0CD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144BC108-008E-456D-8F7B-3A1198D0CD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144BC108-008E-456D-8F7B-3A1198D0CD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144BC108-008E-456D-8F7B-3A1198D0CD65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{144BC108-008E-456D-8F7B-3A1198D0CD65} = {5E29EAEA-2A63-48B8-AD0E-537983574D08}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6064F474-4FBF-488D-B2B0-2ABDE72691FC}
+	EndGlobalSection
+EndGlobal
