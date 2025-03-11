@@ -11,8 +11,26 @@
     <a routerLink="/add" class="btn btn-primary btn-hover-primary">Add New Task</a>
   </div>
 
+  <!-- Filter and Sort Controls -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="statusFilter" class="form-label">Filter by Status</label>
+      <select id="statusFilter" class="form-select" [(ngModel)]="statusFilter" (change)="applyFilters()">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="sortBy" class="form-label">Sort by</label>
+      <select id="sortBy" class="form-select" [(ngModel)]="sortBy" (change)="applyFilters()">
+        <option value="title">Title</option>
+      </select>
+    </div>
+  </div>
+
   <!-- Task List -->
-  <div *ngIf="tasks$ | async as tasks" class="list-group">
+  <div *ngIf="filteredTasks$ | async as tasks" class="list-group">
     <div *ngFor="let task of tasks" class="list-group-item mb-3 shadow-sm">
       <div class="d-flex justify-content-between align-items-center">
         <div>
@@ -37,7 +55,7 @@
   </div>
 
   <!-- No Tasks Message -->
-  <div *ngIf="(tasks$ | async)?.length === 0" class="alert alert-info">
+  <div *ngIf="(filteredTasks$ | async)?.length === 0" class="alert alert-info">
     No tasks found. Add a new task to get started!
   </div>
 </div>
