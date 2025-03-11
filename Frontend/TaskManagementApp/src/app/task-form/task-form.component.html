@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">{{ isEditMode ? 'Edit Task' : 'Add New Task' }}</h1>
+
+  <!-- Task Form -->
+  <form (ngSubmit)="onSubmit()" class="card p-4 shadow-sm">
+    <!-- Title Input -->
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        [(ngModel)]="task.title"
+        name="title"
+        id="title"
+        class="form-control"
+        placeholder="Enter task title"
+        required
+      />
+    </div>
+
+    <!-- Description Input -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        [(ngModel)]="task.description"
+        name="description"
+        id="description"
+        class="form-control"
+        placeholder="Enter task description"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary btn-hover-primary">
+        {{ isEditMode ? 'Update Task' : 'Add Task' }}
+      </button>
+    </div>
+  </form>
+</div>

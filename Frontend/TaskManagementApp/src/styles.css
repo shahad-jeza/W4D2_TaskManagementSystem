@@ -1,0 +1,28 @@
+/* Custom hover effects for buttons */
+.btn-hover-primary:hover {
+  background-color: #0d6efd; /* Bootstrap primary color */
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge the button */
+  transition: all 0.3s ease;
+}
+
+.btn-hover-danger:hover {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.btn-hover-outline-primary:hover {
+  background-color: #0d6efd; /* Bootstrap primary color */
+  color: white;
+  border-color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-outline-danger:hover {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border-color: #dc3545;
+  transition: all 0.3s ease;
+}

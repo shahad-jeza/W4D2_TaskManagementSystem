@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Task List</h1>
+
+  <!-- Error Message -->
+  <div *ngIf="error$ | async as error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <!-- Add Task Button -->
+  <div class="text-end mb-3">
+    <a routerLink="/add" class="btn btn-primary btn-hover-primary">Add New Task</a>
+  </div>
+
+  <!-- Task List -->
+  <div *ngIf="tasks$ | async as tasks" class="list-group">
+    <div *ngFor="let task of tasks" class="list-group-item mb-3 shadow-sm">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">{{ task.title }}</h5>
+          <p class="mb-1">{{ task.description }}</p>
+          <small class="text-muted">
+            Status: {{ task.completed ? 'Completed' : 'Pending' }}
+          </small>
+        </div>
+        <div>
+          <!-- Edit Button -->
+          <button (click)="editTask(task)" class="btn btn-sm btn-outline-primary btn-hover-outline-primary me-2">
+            Edit
+          </button>
+          <!-- Delete Button -->
+          <button (click)="deleteTask(task.id)" class="btn btn-sm btn-outline-danger btn-hover-outline-danger">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Tasks Message -->
+  <div *ngIf="(tasks$ | async)?.length === 0" class="alert alert-info">
+    No tasks found. Add a new task to get started!
+  </div>
+</div>
